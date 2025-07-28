@@ -1,0 +1,71 @@
+# Data Analysis & Processing
+pandas
+numpy
+scipy
+
+# Data Visualization
+matplotlib
+seaborn
+plotly
+
+# Machine Learning
+scikit-learn
+xgboost
+lightgbm
+tensorflow
+keras
+
+# Hyperparameter Optimization
+optuna
+
+# Data Sources
+kaggle
+requests
+beautifulsoup4
+
+# Technical Analysis
+ta
+yfinance
+
+# Real-time & Async
+aiohttp
+asyncio
+
+# Database
+mysql-connector-python
+pymysql
+
+# Web Framework & API
+streamlit
+fastapi
+uvicorn
+dash
+dash-bootstrap-components
+
+# Utilities & Extras
+python-dotenv
+tqdm
+joblib
+aiofiles
+websockets
+schedule
+
+# Environment & Configuration
+python-dotenv
+configparse
+
+# Jupyter & Development
+jupyter
+ipykernel
+
+# Utilities
+tqdm
+loguru
+
+# Web Framework (for future dashboard)
+streamlit
+
+# API Server Dependencies
+fastapi
+uvicorn[standard]
+pydantic
