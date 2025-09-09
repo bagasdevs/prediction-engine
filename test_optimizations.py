@@ -13,7 +13,7 @@ from datetime import datetime
 sys.path.append('.')
 
 try:
-    from ml_engine import MLEngine
+    from flutter_app.backend.ml_engine import MLEngine
     print("✅ ML Engine imported successfully")
 except Exception as e:
     print(f"❌ ML Engine import error: {e}")

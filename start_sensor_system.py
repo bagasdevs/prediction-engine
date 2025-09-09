@@ -1,23 +1,38 @@
 #!/usr/bin/env python3
 """
-Simplified Real-time Sensor System Starter
-Fokus pada sensor data simulation dan basic dashboard
+Real-time Data Simulator untuk Flutter App
+Generate data sensor otomatis setiap 5 detik
 """
 
-import subprocess
 import sys
 import os
 import time
+import subprocess
+from threading import Thread
 
-def start_mysql_simulator():
-    """Start MySQL simulator untuk sensor data"""
-    print("🗄️ Starting MySQL Sensor Data Simulator...")
+# Add project root to path
+sys.path.append(os.path.dirname(__file__))
+
+try:
+    from simulasi_data.simulasi1 import SensorDataSimulator
+except ImportError:
+    print("⚠️ simulasi1.py not found, using fallback simulator")
+    SensorDataSimulator = None
+
+def start_continuous_simulation():
+    """Start continuous data simulation"""
+    print("� Starting Real-time Sensor Data Simulation")
+    print("=" * 50)
+    print("📊 Generating sensor data every 5 seconds")
+    print("📱 Data akan tampil real-time di Flutter app")
+    print("🔄 Tekan Ctrl+C untuk stop")
+    print("=" * 50)
     
-    try:
-        # Run simulator in background
-        process = subprocess.Popen([
-            sys.executable, "simulasi.py"
-        ], cwd=os.getcwd())
+    if SensorDataSimulator:
+        simulator = SensorDataSimulator()
+        simulator.run_simulation(interval=5.0, verbose=True)
+    else:
+        print("❌ Simulator not available")
         
         print("✅ Simulator started successfully")
         print(f"   Process ID: {process.pid}")
